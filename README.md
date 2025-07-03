@@ -27,25 +27,24 @@ This project is an **automated news summarizer and notifier** that:
 ---
 
 ## 🛠️ Installation
-
-1. Clone this repo:
+Clone this repo:
 
 ```bash
 git clone https://github.com/YOUR-USERNAME/News_Bot-AI-Agent.git
 cd News_Bot-AI-Agent
 
-2. Install dependencies:
+1. Install dependencies:
 ```bash
 pip install -r requirements.txt
 
-3.Create a .env file in the project root:
+2.Create a .env file in the project root:
 ```bash
 OPENROUTER_API_KEY=your_openrouter_api_key
 NEWSDATA_API_KEY=your_newsdata_api_key
 TELEGRAM_BOT_TOKEN=your_telegram_bot_token
 TELEGRAM_CHAT_ID=your_telegram_chat_id
 
-4. Run the bot:
+3. Run the bot:
 ```bash
 python "news bot.py"
 
