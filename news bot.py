@@ -25,10 +25,10 @@ def fetch_news():
     data = response.json()
 
     if "results" in data and data["results"]:
-        print("✅ Got Indian news!")
+        print("Got Indian news!")
         return data["results"]
 
-    print("❌ No articles found:", data)
+    print("No articles found:", data)
     return []
 
 
@@ -61,12 +61,12 @@ Content: {article.get('content', '')}
     response = requests.post("https://openrouter.ai/api/v1/chat/completions", headers=headers, json=data)
     if response.status_code != 200:
         print("LLM Error:", response.text)
-        return "❌ Failed to summarize."
+        return "Failed to summarize."
 
     result = response.json()
     if "choices" in result:
         return result['choices'][0]['message']['content']
-    return "⚠️ No summary generated."
+    return "No summary generated."
 
 
 # ===== Step 3: Send message via Telegram =====
@@ -81,7 +81,7 @@ def send_to_telegram(message):
     if res.status_code != 200:
         print("Telegram Error:", res.text)
     else:
-        print("✅ Sent to Telegram!")
+        print("Sent to Telegram!")
 
 
 # ===== MAIN FUNCTION =====
